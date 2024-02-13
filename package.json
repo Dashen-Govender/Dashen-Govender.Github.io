@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "STRAT Business Solutions Website",
   "main": "index.js",
+  "homepage": "https://www.stratbsolutions.co.za/",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
