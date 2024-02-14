@@ -27,6 +27,14 @@ app.get("/contact", (req, res) => {
   res.render("contact.ejs");
 });
 
+app.get("/terms", (req, res) => {
+  res.render("terms.ejs");
+});
+
+app.get("/privacy", (req, res) => {
+  res.render("privacy.ejs");
+});
+
 app.listen(process.env.PORT || port, () => {
   console.log(`Server running on port ${port}`);
 });
