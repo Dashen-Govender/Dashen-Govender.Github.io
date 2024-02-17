@@ -272,12 +272,18 @@
 
   .Clients {
     font-family: "Poppins", sans-serif;
-    display: flex;
+    position: relative;
+    max-height: 100%;
+    max-width: 100%;
     flex: 1 1 0;
     flex-direction: column;
     background-color: rgb(26, 30, 69, 0.7);
     color: rgb(255, 255, 255);
     font-size: 15px;
+  }
+
+  .Clients div {
+    height: 600px;
   }
 
   .Social {
