@@ -2,9 +2,10 @@
 <html lang="en" />
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>STRAT Webpage</title>
-  <link rel="stylesheet" href="/styles/layout.css" />
-  <link rel="stylesheet" href="/styles/content.css" />
+  <link rel="stylesheet" href="/styles/desktop.css" />
+  <link rel="stylesheet" href="/styles/mobile.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -14,32 +15,26 @@
 </head>
 
 <div class="page">
-<header>
-  <div class="container">
-    <div id="background">
-      <img src="/background.jpg" class="stretch" alt="" />
+  <img src="/background.jpg" id="background" alt="" />
+  <header>
+    <div class="container">
+      <div class="logo-background">
+        <img class="logo" src="/logo4.png" style="width: 100px; height: auto" />
+      </div>
+      <div class="title-header">
+        <h1 class="title1">STRAT</h1>
+        <h1 class="title2">Business Solutions</h1>
+      </div>
+      <div class="block"></div>
+      <div class="navbar">
+        <ul class="navbar-nav">
+          <a class="HomeAnc Tab" href="/">Home</a>
+          <a class="ServicesAnc Tab" href="/services">Services</a>
+          <a class="SolutionsAnc Tab" href="/solutions">Solutions</a>
+          <a class="ClientsAnc Tab" href="/clients">Clients</a>
+          <a class="SocialAnc Tab" href="/social">Social</a>
+          <a class="ContactAnc Tab" href="/contact">Contact</a>
+        </ul>
+      </div>
     </div>
-    <div class="logo-background">
-      <img
-        class="logo"
-        src="/logo4.png"
-        style="width: 100px; height: auto"
-      />
-    </div>
-    <div class="title-header">
-      <h1 class="title1">STRAT</h1>
-      <h1 class="title2">Business Solutions</h1>
-    </div>
-    <div class="block"></div>
-    <div class="navbar">
-      <ul class="navbar-nav">
-        <a class="HomeAnc Tab" href="/">Home</a>
-        <a class="ServicesAnc Tab" href="/services">Services</a>
-        <a class="SolutionsAnc Tab" href="/solutions">Solutions</a>
-        <a class="ClientsAnc Tab" href="/clients">Clients</a>
-        <a class="SocialAnc Tab" href="/social">Social</a>
-        <a class="ContactAnc Tab" href="/contact">Contact</a>
-      </ul>
-    </div>
-  </div>
-</header>
+  </header>
