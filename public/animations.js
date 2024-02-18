@@ -322,7 +322,6 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
       $("#left-arrow").css("margin", "0px");
       $("#right-arrow").css("margin", "0px");
 
-
       $(".Slns li").eq(index2).attr("id", "not-invisible");
       $(".Slns li").eq(1).attr("id", "invisible");
       $(".Slns li").eq(2).attr("id", "invisible");
