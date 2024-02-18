@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>STRAT Webpage</title>
-  <link rel="stylesheet" href="/styles/desktop.css" />
   <link rel="stylesheet" href="/styles/mobile.css" />
+  <link rel="stylesheet" href="/styles/desktop.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -26,15 +26,15 @@
         <h1 class="title2">Business Solutions</h1>
       </div>
       <div class="block"></div>
-      <div class="navbar">
+      <form action="/tab" method="POST" class="navbar">
         <ul class="navbar-nav">
-          <a class="HomeAnc Tab" href="/">Home</a>
-          <a class="ServicesAnc Tab" href="/services">Services</a>
-          <a class="SolutionsAnc Tab" href="/solutions">Solutions</a>
-          <a class="ClientsAnc Tab" href="/clients">Clients</a>
-          <a class="SocialAnc Tab" href="/social">Social</a>
-          <a class="ContactAnc Tab" href="/contact">Contact</a>
+          <button type="submit" value="home" name="choice" class="Tab">Home</button>
+          <button type="submit" value="services" name="choice" class="Tab">Services</button>
+          <button type="submit" value="solutions" name="choice" class="Tab">Solutions</button>
+          <button type="submit" value="clients" name="choice" class="Tab">Clients</button>
+          <button type="submit" value="social" name="choice" class="Tab">Social</button>
+          <button type="submit" value="contact" name="choice" class="Tab">Contact</button>
         </ul>
-      </div>
+      </form>
     </div>
   </header>

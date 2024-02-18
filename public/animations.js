@@ -6,16 +6,16 @@ window.addEventListener("load", function () {
 
   if (portrait) {
     $(".block").remove();
-    document.querySelector(".navbar").innerHTML = `
-                <ul class='navbar-nav'>
-                  <a class='HomeAnc Tab' href='/'>Home</a>
-                  <a class='ServicesAnc Tab' href='/services'>Services</a>
-                  <a class='SolutionsAnc Tab' href='/solutions'>Solutions</a>
-                  <a class='ClientsAnc Tab' href='/clients'>Clients</a>
-                  <a class='SocialAnc Tab' href='/social'>Social</a>
-                  <a class='ContactAnc Tab' href='/contact'>Contact</a>
-                </ul>`;
     $(".navbar-nav").before(`<img id='dropdown' src='/dropdown_closed.png'/>`);
+
+    document
+      .querySelector(".navbar-nav .Tab")
+      .addEventListener("click", function () {
+        document
+          .querySelector("#dropdown")
+          .setAttribute("src", "/dropdown_closed.png");
+        $(".navbar-nav").attr("id", "invisible");
+      });
 
     $(".navbar-nav").attr("id", "invisible");
     document.querySelector("#dropdown").addEventListener("click", function () {
@@ -33,11 +33,11 @@ window.addEventListener("load", function () {
       }
     });
 
-    $(".List ul").before(`<img id="left-arrow" src="/left-arrow.png" />`);
-    $(".List ul").after(`<img id="right-arrow" src="/right-arrow.png" />`);
-
     var index = 0;
     if (document.querySelectorAll(".Ethics li").length != 0) {
+      $(".List ul").before(`<img id="left-arrow" src="/left-arrow.png" />`);
+      $(".List ul").after(`<img id="right-arrow" src="/right-arrow.png" />`);
+
       $(".Ethics li").eq(index).attr("id", "not-invisible");
       $(".Ethics li").eq(1).attr("id", "invisible");
       $(".Ethics li").eq(2).attr("id", "invisible");
@@ -190,18 +190,18 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
   if (portrait) {
     if ($(".block").length != 0) {
       $(".block").remove();
-      document.querySelector(".navbar").innerHTML = `
-                  <ul class='navbar-nav'>
-                    <a class='HomeAnc Tab' href='/'>Home</a>
-                    <a class='ServicesAnc Tab' href='/services'>Services</a>
-                    <a class='SolutionsAnc Tab' href='/solutions'>Solutions</a>
-                    <a class='ClientsAnc Tab' href='/clients'>Clients</a>
-                    <a class='SocialAnc Tab' href='/social'>Social</a>
-                    <a class='ContactAnc Tab' href='/contact'>Contact</a>
-                  </ul>`;
       $(".navbar-nav").before(
         `<img id='dropdown' src='/dropdown_closed.png'/>`
       );
+
+      document
+        .querySelector(".navbar-nav .Tab")
+        .addEventListener("click", function () {
+          document
+            .querySelector("#dropdown")
+            .setAttribute("src", "/dropdown_closed.png");
+          $(".navbar-nav").attr("id", "invisible");
+        });
 
       $(".navbar-nav").attr("id", "invisible");
       document
@@ -222,13 +222,13 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
             $(".navbar-nav").attr("id", "invisible");
           }
         });
-
-      $(".List ul").before(`<img id="left-arrow" src="/left-arrow.png" />`);
-      $(".List ul").after(`<img id="right-arrow" src="/right-arrow.png" />`);
     }
 
     var index = 0;
     if ($(".Ethics li").length != 0) {
+      $(".List ul").before(`<img id="left-arrow" src="/left-arrow.png" />`);
+      $(".List ul").after(`<img id="right-arrow" src="/right-arrow.png" />`);
+
       if ($(`.Ethics li`).eq(index).attr("id") !== undefined) {
         for (let i = 0; i < 8; i++) {
           if ($(`.Ethics li`).eq(i).attr("id") === "not-invisible") {
@@ -353,16 +353,10 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
   } else if (!portrait) {
     if ($(".block").length === 0) {
       $(".title-header").after(`<div class="block"></div>`);
-      document.querySelector(".navbar").innerHTML = `<ul class="navbar-nav">
-      <a class="HomeAnc Tab" href="/">Home</a>
-      <a class="ServicesAnc Tab" href="/services">Services</a>
-      <a class="SolutionsAnc Tab" href="/solutions">Solutions</a>
-      <a class="ClientsAnc Tab" href="/clients">Clients</a>
-      <a class="SocialAnc Tab" href="/social">Social</a>
-      <a class="ContactAnc Tab" href="/contact">Contact</a>
-    </ul>`;
+      $('#dropdown').remove();
       $("#left-arrow").remove();
       $("#right-arrow").remove();
+      
       if ($(".Slns").length != 0) {
         document.querySelector(".Slns").innerHTML = `<div>
       <h4>Analytical and Data-Related Tasks</h4>

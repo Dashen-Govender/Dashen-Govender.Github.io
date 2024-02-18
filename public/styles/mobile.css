@@ -1,487 +1,392 @@
 @media screen and (orientation: portrait) {
-  .page {
+  .AboutUs,
+  .Contact,
+  .List,
+  .Privacy h2,
+  .Privacy h3,
+  .Services,
+  .Slns,
+  .Social,
+  .Terms h2,
+  .Terms h3,
+  .item .c-heading,
+  .navbar-nav,
+  .title-header,
+  footer {
+    text-align: center;
+  }
+  .title1,
+  .title2 {
+    font-family: Vollkorn, serif;
+    font-weight: 400;
+    font-size: 25px;
+    margin: 0;
     display: flex;
-    flex-direction: column;
+  }
+  .List,
+  .List ul,
+  .container,
+  .navbar-nav,
+  .page,
+  .title-header,
+  .title1,
+  .title2 {
+    display: flex;
+  }
+  .List,
+  .List ul,
+  .logo {
+    position: relative;
+  }
+  .List,
+  .List ul,
+  .container,
+  .page,
+  .title-header,
+  header {
     width: 100%;
+  }
+  #left-arrow,
+  #right-arrow {
+    height: 25px;
+    width: 25px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  .page {
+    flex-direction: column;
     height: 100%;
   }
-
+  #dropdown,
+  .title-header {
+    height: 100px;
+    width: 100%;
+  }
   #background {
     position: fixed;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     width: max-content;
     height: 100%;
-    z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+    z-index: -1;
   }
-
   header {
     flex-grow: 1;
     flex-shrink: 1;
-    width: 100%;
     z-index: 1;
   }
-
   .container {
     height: 100px;
-    width: 100%;
-    display: flex;
     flex-direction: row;
     flex: 1 1 0;
   }
-
   .logo-background {
     display: flex;
     background-color: rgba(10, 10, 10, 0.3);
     flex-basis: 100px;
   }
-
   .logo {
-    position: relative;
     margin: 0;
     flex-grow: 1;
   }
-
   .title-header {
-    display: flex;
     flex-direction: column;
-    text-align: center;
-    height: 100px;
-    width: 100%;
     background-color: rgba(255, 255, 255, 0.5);
     flex-grow: 1 1 0;
     align-items: center;
     justify-content: center;
   }
-
+  #dropdown,
+  .navbar-nav {
+    background-color: rgba(42, 63, 125, 0.8);
+  }
+  #dropdown {
+    display: flex;
+    flex-direction: row;
+    min-width: 80px;
+    flex: 1 1 0;
+  }
   .title1 {
-    font-family: "Vollkorn", serif;
-    display: flex;
-    color: rgb(146, 137, 39);
-    font-weight: normal;
-    font-size: 25px;
-    margin: 0px;
+    color: #928927;
   }
-
   .title2 {
-    font-family: "Vollkorn", serif;
-    display: flex;
-    color: rgb(8, 38, 103);
-    font-weight: normal;
-    font-size: 25px;
-    margin: 0px;
+    color: #082667;
   }
-
+  .AboutUs,
+  .Clients,
+  .Services,
+  .Social,
+  .Solutions,
+  .navbar-nav {
+    font-family: Poppins, sans-serif;
+  }
+  .AboutUs,
+  .Clients,
+  .Contact,
+  .Ethics,
+  .Privacy,
+  .Solutions,
+  .Terms,
+  footer {
+    font-size: 15px;
+  }
   .block {
     visibility: collapse;
   }
-
-  #dropdown {
-    height: 100px;
-    width: 80px;
-    flex: 1 1 0;
-    background-color: rgba(42, 63, 125, 0.8);
-  }
-
   .navbar-nav {
-    display: flex;
     flex-direction: column;
-    background-color: rgba(42, 63, 125, 0.8);
-    margin: 0px;
-    padding-left: 0px;
-    text-align: center;
+    margin: 0;
+    padding-left: 0;
     padding-top: 10px;
     padding-bottom: 10px;
     gap: 10px;
-    font-family: "Poppins", sans-serif;
   }
-
-  .navbar-nav a {
+  .Clients,
+  .Contact,
+  .Services,
+  .Social,
+  .Solutions,
+  .gap,
+  main {
+    background-color: rgb(26, 30, 69, 0.7);
+  }
+  .navbar-nav button {
+    color: #fff;
+    padding: 0;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .Privacy a,
+  .Terms a,
+  .Videos a,
+  .YouTube-Link a {
     text-decoration: none;
-    color: white;
+    color: #6495ed;
   }
-
+  .AboutUs,
+  .Ethics h3,
+  .Service.Automation,
+  .Service.Digital-Designs,
+  .Service.Mobile-Development,
+  .Service.Web-Development,
+  .Services .description,
+  .Software-Development #slns-description,
+  .Software-Development h2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   main {
     flex-direction: row;
-    background-color: rgb(26, 30, 69, 0.7);
-    color: rgb(255, 255, 255);
+    color: #fff;
     flex-grow: 1;
     flex-shrink: 1;
     max-width: max-content;
   }
-
-  .AboutUs {
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 15px;
+  .List ul,
+  .Slns ul {
+    padding: 0;
+    margin: 0 30px;
+    list-style-type: none;
   }
-
-  .Ethics {
-    font-size: 15px;
-  }
-
-  .Ethics h3 {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
   .List {
-    position: relative;
-    display: flex;
     flex: 1 1 0;
     flex-direction: row;
     height: fit-content;
-    width: 100%;
-    text-align: center;
     justify-content: center;
   }
-
   .List ul {
-    display: flex;
-    position: relative;
     flex: 1 1 0;
-    list-style-type: none;
-    width: 100%;
     height: 400px;
-    padding: 0px;
-    margin: 0px;
-    margin-left: 30px;
-    margin-right: 30px;
   }
-
-  .List li {
-    position: absolute;
-    width: 100%;
-  }
-
-  .List img {
-    height: 120px;
-    width: 250px;
-  }
-
-  .Services {
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: rgb(26, 30, 69, 0.7);
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-  }
-
-  .Services .description {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .Service.Digital-Designs {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .Service.Web-Development {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .Software-Development h2,
-  .Software-Development #slns-description {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .Slns {
-    position: relative;
-    display: flex;
-    flex: 1 1 0;
-    flex-direction: row;
-    height: 230px;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .Slns ul {
-    display: flex;
-    position: relative;
-    flex: 1 1 0;
-    list-style-type: none;
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-
+  .List li,
   .Slns li {
     position: absolute;
     width: 100%;
   }
-
-  .Service.Mobile-Development {
-    padding-left: 10px;
-    padding-right: 10px;
+  .Clients,
+  .Slns,
+  .Slns ul,
+  .item {
+    position: relative;
   }
-
-  .Service.Automation {
-    padding-left: 10px;
-    padding-right: 10px;
+  .List img {
+    height: 120px;
+    width: 250px;
   }
-
+  .Slns,
+  .Slns ul {
+    display: flex;
+    width: 100%;
+  }
+  .Services,
+  .Social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 15px;
+  }
+  .Slns {
+    flex: 1 1 0;
+    flex-direction: row;
+    height: 230px;
+    justify-content: center;
+  }
+  .Slns ul {
+    flex: 1 1 0;
+    height: 100%;
+  }
+  .Solutions,
+  .Videos {
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+  }
   .Services img {
     height: 200px;
     width: 300px;
     margin-top: 10px;
   }
-
   .Solutions {
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
-    background-color: rgb(26, 30, 69, 0.7);
-    color: rgb(255, 255, 255);
-    font-size: 15px;
+    color: #fff;
     padding-top: 20px;
   }
-
   .examples #img1 {
     max-width: 260px;
     max-height: 200px;
   }
-
-  .examples #p1 {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .examples #img2 {
-    max-width: 260px;
-    max-height: 400px;
-  }
-
+  .Social p,
+  .examples #p1,
   .examples #p2 {
     margin-left: 10px;
     margin-right: 10px;
   }
-
+  .examples #img2 {
+    max-width: 260px;
+    max-height: 400px;
+  }
   .Clients {
-    font-family: "Poppins", sans-serif;
-    position: relative;
     max-height: 100%;
     max-width: 100%;
     flex: 1 1 0;
     flex-direction: column;
-    background-color: rgb(26, 30, 69, 0.7);
-    color: rgb(255, 255, 255);
-    font-size: 15px;
+    color: #fff;
   }
-
   .Clients div {
     height: 600px;
   }
-
-  .Social {
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: rgb(26, 30, 69, 0.7);
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-  }
-
-  .Social p {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
   .YouTube-Link {
     display: flex;
     flex-direction: row;
   }
-
   .YouTube-Link a {
     height: fit-content;
     width: fit-content;
     margin-top: 8px;
-    text-decoration: none;
-    color: cornflowerblue;
   }
-
   .Social img {
     height: 180px;
     width: 300px;
   }
-
   .Videos {
-    display: flex;
-    flex-direction: column;
     margin-top: 20px;
     align-items: center;
-    text-align: center;
   }
-
   .Video1,
-  .Video2 {
+  .Video2,
+  .item.cend {
     display: flex;
     flex-direction: column;
   }
-
   .Videos a {
-    text-decoration: none;
-    color: cornflowerblue;
-    margin: auto;
-    margin-top: 10px;
+    margin: 10px auto;
     width: fit-content;
-    margin-bottom: 10px;
     display: block;
     height: 50%;
   }
-
   .Contact {
-    font-family: "Vollkorn", serif;
+    font-family: Vollkorn, serif;
     flex: 1 1 0;
     max-width: 100%;
     align-items: center;
-    text-align: center;
-    background-color: rgb(26, 30, 69, 0.7);
-    color: rgb(255, 255, 255);
-    font-size: 15px;
+    color: #fff;
   }
-
   .contact-list {
     list-style-type: none;
-    padding: 0px;
+    padding: 0;
   }
-
   .item {
     display: grid;
-    position: relative;
     grid-template-rows: 40px 1fr;
     grid-template-columns: 1fr 3fr;
   }
-
   .item .c-heading {
-    grid-area: 1 / 1 / 2 / 3;
-    text-align: center;
+    grid-area: 1/1/2/3;
   }
-
+  .Email.Icon,
   .Location.Icon,
-  .Mobile.Icon,
-  .Email.Icon {
-    grid-area: 2 / 1 / 3 / 2;
+  .Mobile.Icon {
+    grid-area: 2/1/3/2;
     display: block;
     margin: auto;
     height: 50%;
     width: 50%;
   }
-
   .item .description {
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 2/2/3/3;
     text-align: left;
     margin-left: 10px;
   }
-
-  .item.cend {
-    display: flex;
-    flex-direction: column;
-  }
-
   .sm-anchors {
     display: flex;
     flex-direction: row;
     gap: 20px;
     justify-content: center;
   }
-
   .sm-anchors a {
     text-decoration: none;
   }
-
-  .Terms,
-  .Privacy {
-    font-family: "Poppins", sans-serif;
+  .Privacy,
+  .Terms {
+    font-family: Poppins, sans-serif;
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 15px;
   }
-
-  .Terms h2,
-  .Terms h3 {
-    text-align: center;
-  }
-
-  .Terms a,
-  .Privacy a {
-    text-decoration: none;
-    color: cornflowerblue;
-  }
-
-  .Privacy h2,
-  .Privacy h3 {
-    text-align: center;
-  }
-
   #invisible {
     visibility: hidden;
   }
-
   #not-invisible {
     visibility: visible;
   }
-
   .gap {
-    background-color: rgb(26, 30, 69, 0.7);
     height: 100px;
   }
-
   #left-arrow {
     position: absolute;
-    height: 25px;
-    width: 25px;
-    top: 50%;
-    left: 0%;
-    transform: translate(0%, -50%);
+    left: 0;
   }
-
   #right-arrow {
     position: absolute;
-    height: 25px;
-    width: 25px;
-    top: 50%;
-    right: 0%;
-    transform: translate(0%, -50%);
+    right: 0;
   }
-
   footer {
     flex-direction: row;
-    text-align: center;
     flex-grow: 1;
     flex-shrink: 1;
     background-color: rgba(255, 255, 255, 0.8);
-    color: rgb(0, 0, 0);
-    font-size: 15px;
+    color: #000;
   }
-
   footer a {
-    color: rgb(0, 0, 0);
+    color: #000;
     text-decoration: underline;
   }
-
   footer #terms-privacy {
-    margin-top: 0px;
+    margin-top: 0;
     padding-top: 16px;
   }
-
   footer #copyright {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     padding-bottom: 16px;
   }
 }
