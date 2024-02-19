@@ -20,10 +20,7 @@
     color: #6495ed;
   }
   .page {
-    max-width: 1150px;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+    display: none;
   }
   .container {
     display: grid;

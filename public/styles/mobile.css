@@ -27,7 +27,6 @@
   .List ul,
   .container,
   .navbar-nav,
-  .page,
   .title-header,
   .title1,
   .title2 {
@@ -41,7 +40,6 @@
   .List,
   .List ul,
   .container,
-  .page,
   .title-header,
   header {
     width: 100%;
@@ -54,8 +52,7 @@
     transform: translate(0, -50%);
   }
   .page {
-    flex-direction: column;
-    height: 100%;
+    display: none;
   }
   #dropdown,
   .title-header {
