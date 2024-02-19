@@ -9,15 +9,10 @@ window.addEventListener("load", function () {
     $(".navbar-nav").before(`<img id='dropdown' src='/dropdown_closed.png'/>`);
 
     document
-      .querySelector(".navbar-nav .Tab")
-      .addEventListener("click", function () {
-        document
-          .querySelector("#dropdown")
-          .setAttribute("src", "/dropdown_closed.png");
-        $(".navbar-nav").attr("id", "invisible");
-      });
-
+      .querySelector("#dropdown")
+      .setAttribute("src", "/dropdown_closed.png");
     $(".navbar-nav").attr("id", "invisible");
+
     document.querySelector("#dropdown").addEventListener("click", function () {
       var dropdown = document.querySelector("#dropdown").getAttribute("src");
       if (dropdown === "/dropdown_closed.png") {
@@ -152,7 +147,8 @@ window.addEventListener("load", function () {
         });
     }
 
-    document.querySelector('.page').style =  "display: flex; flex-direction: column; height: 100%; width: 100%;";
+    document.querySelector(".page").style =
+      "display: flex; flex-direction: column; height: 100%; width: 100%;";
   } else if (!portrait) {
     var numOfPrincipleImages = document.querySelectorAll(".Principle").length;
     var principle;
@@ -184,7 +180,8 @@ window.addEventListener("load", function () {
           .classList.add("float-right");
       }
     }
-    document.querySelector('.page').style =  "display: flex; max-width: 1150px; flex-direction: column; margin: auto;";
+    document.querySelector(".page").style =
+      "display: flex; max-width: 1150px; flex-direction: column; margin: auto;";
   }
 });
 
@@ -198,14 +195,8 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
       );
 
       document
-        .querySelector(".navbar-nav .Tab")
-        .addEventListener("click", function () {
-          document
-            .querySelector("#dropdown")
-            .setAttribute("src", "/dropdown_closed.png");
-          $(".navbar-nav").attr("id", "invisible");
-        });
-
+        .querySelector("#dropdown")
+        .setAttribute("src", "/dropdown_closed.png");
       $(".navbar-nav").attr("id", "invisible");
       document
         .querySelector("#dropdown")
@@ -356,10 +347,10 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
   } else if (!portrait) {
     if ($(".block").length === 0) {
       $(".title-header").after(`<div class="block"></div>`);
-      $('#dropdown').remove();
+      $("#dropdown").remove();
       $("#left-arrow").remove();
       $("#right-arrow").remove();
-      
+
       if ($(".Slns").length != 0) {
         document.querySelector(".Slns").innerHTML = `<div>
       <h4>Analytical and Data-Related Tasks</h4>
