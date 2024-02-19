@@ -190,7 +190,6 @@ window.addEventListener("load", function () {
 
 window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
   var portrait = e.matches;
-  document.querySelector('.page').style =  "display: none;";
   if (portrait) {
     if ($(".block").length != 0) {
       $(".block").remove();
@@ -354,7 +353,6 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
           $(".Slns li").eq(index2).attr("id", "not-invisible");
         });
     }
-    document.querySelector('.page').style =  "display: flex; flex-direction: column; height: 100%; width: 100%;";
   } else if (!portrait) {
     if ($(".block").length === 0) {
       $(".title-header").after(`<div class="block"></div>`);
@@ -439,6 +437,5 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
           .classList.add("float-right");
       }
     }
-    document.querySelector('.page').style =  "display: flex; max-width: 1150px; flex-direction: column; margin: auto;";
   }
 });
