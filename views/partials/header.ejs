@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>STRAT Webpage</title>
-  <link rel="stylesheet" href="/styles/mobile.css" />
   <link rel="stylesheet" href="/styles/desktop.css" />
+  <link rel="stylesheet" href="/styles/tablet.css" />
+  <link rel="stylesheet" href="/styles/mobile.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -27,7 +28,7 @@
       </div>
       <div class="block"></div>
       <form action="/tab" method="POST" class="navbar">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav" id="not-invisible">
           <button type="submit" value="home" name="choice" class="Tab">Home</button>
           <button type="submit" value="services" name="choice" class="Tab">Services</button>
           <button type="submit" value="solutions" name="choice" class="Tab">Solutions</button>

@@ -1,4 +1,4 @@
-@media screen and (orientation: portrait) {
+@media screen and (max-width: 640px) {
   .AboutUs,
   .Contact,
   .List,
@@ -15,8 +15,7 @@
   footer {
     text-align: center;
   }
-  .title1,
-  .title2 {
+  .title-header h1 {
     font-family: Vollkorn, serif;
     font-weight: 400;
     font-size: 25px;
@@ -32,8 +31,12 @@
   .title2 {
     display: flex;
   }
+  .Clients,
   .List,
   .List ul,
+  .Slns,
+  .Slns ul,
+  .item,
   .logo {
     position: relative;
   }
@@ -93,11 +96,8 @@
     align-items: center;
     justify-content: center;
   }
-  #dropdown,
-  .navbar-nav {
-    background-color: rgba(42, 63, 125, 0.8);
-  }
   #dropdown {
+    background-color: rgba(42, 63, 125, 0.8);
     display: flex;
     flex-direction: row;
     min-width: 80px;
@@ -132,6 +132,7 @@
   }
   .navbar-nav {
     flex-direction: column;
+    background-color: #e1f1ff;
     margin: 0;
     padding-left: 0;
     padding-top: 10px;
@@ -148,7 +149,7 @@
     background-color: rgb(26, 30, 69, 0.7);
   }
   .navbar-nav button {
-    color: #fff;
+    color: #051b49;
     padding: 0;
     border: 0;
     background-color: rgba(0, 0, 0, 0);
@@ -199,12 +200,6 @@
   .Slns li {
     position: absolute;
     width: 100%;
-  }
-  .Clients,
-  .Slns,
-  .Slns ul,
-  .item {
-    position: relative;
   }
   .List img {
     height: 120px;
@@ -385,5 +380,96 @@
   footer #copyright {
     margin-bottom: 0;
     padding-bottom: 16px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .container, #dropdown, .title-header {
+    height: 90px;
+  }
+  #dropdown {
+    min-width: 70px;
+  }
+  .logo-background {
+    width: 90px;
+  }
+  .title-header h1 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .container, #dropdown, .title-header {
+    height: 90px;
+  }
+  #dropdown {
+    min-width: 70px;
+  }
+  .logo-background {
+    width: 90px;
+  }
+  .title-header h1 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .AboutUs,
+  .Clients,
+  .Contact,
+  .Ethics,
+  .Privacy,
+  .Solutions,
+  .Terms,
+  .title-header h1,
+  footer {
+    font-size: 15px;
+  }
+  .Services,
+  .Social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 10px;
+  }
+  #dropdown,
+  .container,
+  .title-header {
+    height: 70px;
+  }
+  #dropdown {
+    min-width: 50px;
+  }
+  .navbar-nav button {
+    font-size: 10px;
+  }
+  .logo-background {
+    width: 70px;
+  }
+  .List img {
+    height: 100px;
+    width: 200px;
+  }
+  .Services img {
+    height: 120px;
+    width: 200px;
+    margin-top: 10px;
+  }
+  .Social img {
+    height: 150px;
+    width: 220px;
+  }
+  #left-arrow,
+  #right-arrow {
+    height: 20px;
+    width: 20px;
+    top: 30%;
+    transform: translate(0, -50%);
+  }
+  .examples #img1 {
+    max-width: 220px;
+    max-height: 150px;
+  }
+  .examples #img2 {
+    max-width: 220px;
+    max-height: 300px;
   }
 }
