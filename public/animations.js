@@ -1,3 +1,134 @@
+function waitForElementToExist(selector) {
+  return new Promise((resolve) => {
+    if (document.querySelector(selector)) {
+      return resolve(document.querySelector(selector));
+    }
+
+    const observer = new MutationObserver(() => {
+      if (document.querySelector(selector)) {
+        resolve(document.querySelector(selector));
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(document.body, {
+      subtree: true,
+      childList: true,
+    });
+  });
+}
+
+waitForElementToExist("#dropdown").then((element) => {
+  document.querySelector("#dropdown").addEventListener("click", function () {
+    var dropdown = document.querySelector("#dropdown").getAttribute("src");
+    if (dropdown === "/dropdown_closed.png") {
+      document
+        .querySelector("#dropdown")
+        .setAttribute("src", "/dropdown_open.png");
+      $(".navbar-nav").attr("id", "not-invisible");
+    } else {
+      document
+        .querySelector("#dropdown")
+        .setAttribute("src", "/dropdown_closed.png");
+      $(".navbar-nav").attr("id", "invisible");
+    }
+  });
+});
+
+waitForElementToExist(".Ethics li").then((element) => {
+  waitForElementToExist("#left-arrow").then((element) => {
+    var index = 0;
+    $(".Ethics li").eq(index).attr("id", "not-invisible");
+    $(".Ethics li").eq(1).attr("id", "invisible");
+    $(".Ethics li").eq(2).attr("id", "invisible");
+    $(".Ethics li").eq(3).attr("id", "invisible");
+    $(".Ethics li").eq(4).attr("id", "invisible");
+    $(".Ethics li").eq(5).attr("id", "invisible");
+    $(".Ethics li").eq(6).attr("id", "invisible");
+    $(".Ethics li").eq(7).attr("id", "invisible");
+    document
+      .querySelector("#left-arrow")
+      .addEventListener("click", function () {
+        var previousIndex = index;
+        index--;
+        if (index < 0) {
+          index = 7;
+        }
+        $(".Ethics li").eq(previousIndex).attr("id", "invisible");
+        $(".Ethics li").eq(index).attr("id", "not-invisible");
+      });
+  });
+});
+
+waitForElementToExist(".Ethics li").then((element) => {
+  waitForElementToExist("#left-arrow").then((element) => {
+    var index = 0;
+    $(".Ethics li").eq(index).attr("id", "not-invisible");
+    $(".Ethics li").eq(1).attr("id", "invisible");
+    $(".Ethics li").eq(2).attr("id", "invisible");
+    $(".Ethics li").eq(3).attr("id", "invisible");
+    $(".Ethics li").eq(4).attr("id", "invisible");
+    $(".Ethics li").eq(5).attr("id", "invisible");
+    $(".Ethics li").eq(6).attr("id", "invisible");
+    $(".Ethics li").eq(7).attr("id", "invisible");
+    document
+      .querySelector("#right-arrow")
+      .addEventListener("click", function () {
+        var previousIndex = index;
+        index++;
+        if (index > 7) {
+          index = 0;
+        }
+        $(".Ethics li").eq(previousIndex).attr("id", "invisible");
+        $(".Ethics li").eq(index).attr("id", "not-invisible");
+      });
+  });
+});
+
+waitForElementToExist(".Slns").then((element) => {
+  waitForElementToExist("#left-arrow").then((element) => {
+    var index2 = 0;
+    $(".Slns li").eq(index2).attr("id", "not-invisible");
+    $(".Slns li").eq(1).attr("id", "invisible");
+    $(".Slns li").eq(2).attr("id", "invisible");
+    $(".Slns li").eq(3).attr("id", "invisible");
+    $(".Slns li").eq(4).attr("id", "invisible");
+    document
+      .querySelector("#left-arrow")
+      .addEventListener("click", function () {
+        var previousIndex = index2;
+        index2--;
+        if (index2 < 0) {
+          index2 = 4;
+        }
+        $(".Slns li").eq(previousIndex).attr("id", "invisible");
+        $(".Slns li").eq(index2).attr("id", "not-invisible");
+      });
+  });
+});
+
+waitForElementToExist(".Slns").then((element) => {
+  waitForElementToExist("#right-arrow").then((element) => {
+    var index2 = 0;
+    $(".Slns li").eq(index2).attr("id", "not-invisible");
+    $(".Slns li").eq(1).attr("id", "invisible");
+    $(".Slns li").eq(2).attr("id", "invisible");
+    $(".Slns li").eq(3).attr("id", "invisible");
+    $(".Slns li").eq(4).attr("id", "invisible");
+    document
+      .querySelector("#right-arrow")
+      .addEventListener("click", function () {
+        var previousIndex = index2;
+        index2++;
+        if (index2 > 4) {
+          index2 = 0;
+        }
+        $(".Slns li").eq(previousIndex).attr("id", "invisible");
+        $(".Slns li").eq(index2).attr("id", "not-invisible");
+      });
+  });
+});
+
 window.addEventListener("load", function () {
   var portrait = false;
   if (screen.availHeight > screen.availWidth) {
@@ -13,59 +144,11 @@ window.addEventListener("load", function () {
       .setAttribute("src", "/dropdown_closed.png");
     $(".navbar-nav").attr("id", "invisible");
 
-    document.querySelector("#dropdown").addEventListener("click", function () {
-      var dropdown = document.querySelector("#dropdown").getAttribute("src");
-      if (dropdown === "/dropdown_closed.png") {
-        document
-          .querySelector("#dropdown")
-          .setAttribute("src", "/dropdown_open.png");
-        $(".navbar-nav").attr("id", "not-invisible");
-      } else {
-        document
-          .querySelector("#dropdown")
-          .setAttribute("src", "/dropdown_closed.png");
-        $(".navbar-nav").attr("id", "invisible");
-      }
-    });
-
-    var index = 0;
     if (document.querySelectorAll(".Ethics li").length != 0) {
       $(".List ul").before(`<img id="left-arrow" src="/left-arrow.png" />`);
       $(".List ul").after(`<img id="right-arrow" src="/right-arrow.png" />`);
-
-      $(".Ethics li").eq(index).attr("id", "not-invisible");
-      $(".Ethics li").eq(1).attr("id", "invisible");
-      $(".Ethics li").eq(2).attr("id", "invisible");
-      $(".Ethics li").eq(3).attr("id", "invisible");
-      $(".Ethics li").eq(4).attr("id", "invisible");
-      $(".Ethics li").eq(5).attr("id", "invisible");
-      $(".Ethics li").eq(6).attr("id", "invisible");
-      $(".Ethics li").eq(7).attr("id", "invisible");
-      document
-        .querySelector("#left-arrow")
-        .addEventListener("click", function () {
-          var previousIndex = index;
-          index--;
-          if (index < 0) {
-            index = 7;
-          }
-          $(".Ethics li").eq(previousIndex).attr("id", "invisible");
-          $(".Ethics li").eq(index).attr("id", "not-invisible");
-        });
-      document
-        .querySelector("#right-arrow")
-        .addEventListener("click", function () {
-          var previousIndex = index;
-          index++;
-          if (index > 7) {
-            index = 0;
-          }
-          $(".Ethics li").eq(previousIndex).attr("id", "invisible");
-          $(".Ethics li").eq(index).attr("id", "not-invisible");
-        });
     }
 
-    var index2 = 0;
     if (document.querySelector(".Slns")) {
       document.querySelector(".Slns").innerHTML = `<ul class="slns-list"><li>
       <h4>Analytical and Data-Related Tasks</h4>
@@ -117,34 +200,6 @@ window.addEventListener("load", function () {
       );
       $("#left-arrow").css("margin", "0px");
       $("#right-arrow").css("margin", "0px");
-
-      $(".Slns li").eq(index2).attr("id", "not-invisible");
-      $(".Slns li").eq(1).attr("id", "invisible");
-      $(".Slns li").eq(2).attr("id", "invisible");
-      $(".Slns li").eq(3).attr("id", "invisible");
-      $(".Slns li").eq(4).attr("id", "invisible");
-      document
-        .querySelector("#left-arrow")
-        .addEventListener("click", function () {
-          var previousIndex = index2;
-          index2--;
-          if (index2 < 0) {
-            index2 = 4;
-          }
-          $(".Slns li").eq(previousIndex).attr("id", "invisible");
-          $(".Slns li").eq(index2).attr("id", "not-invisible");
-        });
-      document
-        .querySelector("#right-arrow")
-        .addEventListener("click", function () {
-          var previousIndex = index2;
-          index2++;
-          if (index2 > 4) {
-            index2 = 0;
-          }
-          $(".Slns li").eq(previousIndex).attr("id", "invisible");
-          $(".Slns li").eq(index2).attr("id", "not-invisible");
-        });
     }
 
     document.querySelector(".page").style =
@@ -188,16 +243,7 @@ window.addEventListener("load", function () {
 window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
   var portrait = e.matches;
   if (portrait) {
-    if ($(".block").length != 0) {
-      $(".block").remove();
-      $(".navbar-nav").before(
-        `<img id='dropdown' src='/dropdown_closed.png'/>`
-      );
-
-      document
-        .querySelector("#dropdown")
-        .setAttribute("src", "/dropdown_closed.png");
-      $(".navbar-nav").attr("id", "invisible");
+    waitForElementToExist("#dropdown").then((element) => {
       document
         .querySelector("#dropdown")
         .addEventListener("click", function () {
@@ -216,29 +262,32 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
             $(".navbar-nav").attr("id", "invisible");
           }
         });
+    });
+    if ($(".block").length != 0) {
+      $(".block").remove();
+      $(".navbar-nav").before(
+        `<img id='dropdown' src='/dropdown_closed.png'/>`
+      );
+
+      document
+        .querySelector("#dropdown")
+        .setAttribute("src", "/dropdown_closed.png");
+      $(".navbar-nav").attr("id", "invisible");
     }
 
-    var index = 0;
     if ($(".Ethics li").length != 0) {
       $(".List ul").before(`<img id="left-arrow" src="/left-arrow.png" />`);
       $(".List ul").after(`<img id="right-arrow" src="/right-arrow.png" />`);
+      var index = 0;
+      $(".Ethics li").eq(index).attr("id", "not-invisible");
+      $(".Ethics li").eq(1).attr("id", "invisible");
+      $(".Ethics li").eq(2).attr("id", "invisible");
+      $(".Ethics li").eq(3).attr("id", "invisible");
+      $(".Ethics li").eq(4).attr("id", "invisible");
+      $(".Ethics li").eq(5).attr("id", "invisible");
+      $(".Ethics li").eq(6).attr("id", "invisible");
+      $(".Ethics li").eq(7).attr("id", "invisible");
 
-      if ($(`.Ethics li`).eq(index).attr("id") !== undefined) {
-        for (let i = 0; i < 8; i++) {
-          if ($(`.Ethics li`).eq(i).attr("id") === "not-invisible") {
-            index = i;
-          }
-        }
-      } else {
-        $(".Ethics li").eq(index).attr("id", "not-invisible");
-        $(".Ethics li").eq(1).attr("id", "invisible");
-        $(".Ethics li").eq(2).attr("id", "invisible");
-        $(".Ethics li").eq(3).attr("id", "invisible");
-        $(".Ethics li").eq(4).attr("id", "invisible");
-        $(".Ethics li").eq(5).attr("id", "invisible");
-        $(".Ethics li").eq(6).attr("id", "invisible");
-        $(".Ethics li").eq(7).attr("id", "invisible");
-      }
       document
         .querySelector("#left-arrow")
         .addEventListener("click", function () {
@@ -263,7 +312,6 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
         });
     }
 
-    var index2 = 0;
     if ($(".Slns").length != 0) {
       document.querySelector(".Slns").innerHTML = `<ul class="slns-list"><li>
         <h4>Analytical and Data-Related Tasks</h4>
@@ -315,12 +363,13 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
       );
       $("#left-arrow").css("margin", "0px");
       $("#right-arrow").css("margin", "0px");
-
+      var index2 = 0;
       $(".Slns li").eq(index2).attr("id", "not-invisible");
       $(".Slns li").eq(1).attr("id", "invisible");
       $(".Slns li").eq(2).attr("id", "invisible");
       $(".Slns li").eq(3).attr("id", "invisible");
       $(".Slns li").eq(4).attr("id", "invisible");
+
       document
         .querySelector("#left-arrow")
         .addEventListener("click", function () {
@@ -350,6 +399,17 @@ window.matchMedia("(orientation: portrait)").addEventListener("change", (e) => {
       $("#dropdown").remove();
       $("#left-arrow").remove();
       $("#right-arrow").remove();
+
+      if ($(".Ethics li").length != 0) {
+        $(".Ethics li").eq(0).attr("id", "not-invisible");
+        $(".Ethics li").eq(1).attr("id", "not-invisible");
+        $(".Ethics li").eq(2).attr("id", "not-invisible");
+        $(".Ethics li").eq(3).attr("id", "not-invisible");
+        $(".Ethics li").eq(4).attr("id", "not-invisible");
+        $(".Ethics li").eq(5).attr("id", "not-invisible");
+        $(".Ethics li").eq(6).attr("id", "not-invisible");
+        $(".Ethics li").eq(7).attr("id", "not-invisible");
+      }
 
       if ($(".Slns").length != 0) {
         document.querySelector(".Slns").innerHTML = `<div>
